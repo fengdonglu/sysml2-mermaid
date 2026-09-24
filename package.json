@@ -1,7 +1,7 @@
 {
   "name": "sysml2-mermaid",
-  "version": "0.1.0",
-  "description": "Mermaid external diagram plugin and CLI that renders SysML v2 textual models into diagrams",
+  "version": "0.1.1",
+  "description": "Render SysML v2 textual models (.sysml) as diagrams — a Mermaid plugin, CLI (sysml2svg), Language Server and VS Code extension.",
   "type": "module",
   "license": "MIT",
   "repository": {
@@ -12,9 +12,21 @@
     "mermaid",
     "sysml",
     "sysml-v2",
+    "sysml2",
     "kerml",
+    "uml",
+    "mbse",
+    "diagram",
     "bdd",
-    "block-definition-diagram"
+    "block-definition-diagram",
+    "requirement-diagram",
+    "internal-block-diagram",
+    "state-machine",
+    "activity-diagram",
+    "cli",
+    "lsp",
+    "language-server",
+    "vscode"
   ],
   "bin": {
     "sysml2svg": "./dist/cli/cli.js"

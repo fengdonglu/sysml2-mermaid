@@ -2,6 +2,7 @@ sysml bdd
 package Vehicle {
     enum def Color { red; green; blue; }
 
+    part def Person;
     part def PowerSource;
     part def Engine :> PowerSource {
         attribute power : Real;

@@ -6,35 +6,59 @@ import { renderModel } from '../src/index.js';
 import { viewFromSource } from '../src/directive.js';
 
 const demoDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'demo');
+const PAGES = ['index.html', 'index.zh.html', 'playground.html', 'playground.zh.html'];
+const REPO = 'https://github.com/fengdonglu/sysml2-mermaid';
 
 interface Example { id: string; title: string; sample: string; explanation: string }
 
-async function loadExamples(): Promise<Example[]> {
-  // @ts-expect-error - plain JS demo module has no type declarations
-  const mod = (await import('../demo/examples.mjs')) as { default: Example[] };
+async function loadExamples(suffix: string): Promise<Example[]> {
+  const mod = (await import(`../demo/examples${suffix}.mjs`)) as { default: Example[] };
   return mod.default;
 }
 
 describe('demo', () => {
-  it('ships a gallery and a playground that use the browser bundle', () => {
-    for (const file of ['index.html', 'playground.html']) {
+  it('ships English and Chinese gallery and playground pages', () => {
+    for (const file of PAGES) {
       const html = readFileSync(join(demoDir, file), 'utf8');
-      expect(html).toContain('../dist/sysml2-mermaid.mjs');
+      expect(html, file).toContain('../dist/sysml2-mermaid.mjs');
     }
   });
 
-  it('has an example for every sample, and every sample is valid', async () => {
-    const examples = await loadExamples();
-    expect(examples.length).toBeGreaterThanOrEqual(8);
-    const seen = new Set<string>();
-    for (const ex of examples) {
-      const path = join(demoDir, 'samples', ex.sample);
-      expect(existsSync(path), `missing sample ${ex.sample}`).toBe(true);
-      seen.add(ex.sample);
-      const source = readFileSync(path, 'utf8');
-      expect(viewFromSource(source), `${ex.sample} needs a view directive`).toBeTruthy();
-      const model = renderModel(source);
-      expect(model.diagnostics.filter((d) => d.severity === 'error'), `${ex.sample} has errors`).toEqual([]);
+  it('links every page back to the GitHub repository', () => {
+    for (const file of PAGES) {
+      const html = readFileSync(join(demoDir, file), 'utf8');
+      expect(html, file).toContain(REPO);
+      expect(html, file).toContain('class="repo-link"');
+      expect(html, file).toContain('aria-label="GitHub repository"');
+      expect(html, file).toContain('<span>fengdonglu/sysml2-mermaid</span>');
     }
   });
+
+  it('offers a language switch on every page', () => {
+    for (const file of PAGES) {
+      const html = readFileSync(join(demoDir, file), 'utf8');
+      if (file.endsWith('.zh.html')) {
+        expect(html, file).toMatch(/hreflang="en"/);
+        expect(html, file).toContain(file.replace('.zh.html', '.html'));
+      } else {
+        expect(html, file).toMatch(/hreflang="zh"/);
+        expect(html, file).toContain(file.replace('.html', '.zh.html'));
+      }
+    }
+  });
+
+  for (const suffix of ['', '.zh']) {
+    it(`examples${suffix}.mjs has valid samples with view directives`, async () => {
+      const examples = await loadExamples(suffix);
+      expect(examples.length).toBeGreaterThanOrEqual(8);
+      for (const ex of examples) {
+        const path = join(demoDir, 'samples', ex.sample);
+        expect(existsSync(path), `missing sample ${ex.sample}`).toBe(true);
+        const source = readFileSync(path, 'utf8');
+        expect(viewFromSource(source), `${ex.sample} needs a view directive`).toBeTruthy();
+        const model = renderModel(source);
+        expect(model.diagnostics.filter((d) => d.severity !== 'info'), `${ex.sample} has diagnostics`).toEqual([]);
+      }
+    });
+  }
 });

@@ -4,7 +4,7 @@
 
 将 **SysML v2** 文本模型（`.sysml`）渲染为图表——形态为 Mermaid 外部图表插件，另附 CLI 转换器、语言服务器（LSP）与 VS Code 扩展。
 
-> 状态：**v0.5**。五种视图已能从 `.sysml` 文本经库 API、`sysml2svg` CLI（`--view bdd`、`requirement`、`ibd`、`statemachine`、`activity`）与 Mermaid 插件端到端输出 SVG：**块定义图（BDD）**、**需求图**、**内部块图（IBD，含端口与连接器）**、**状态机图**、**活动/泳道图**。另有 **语言服务器**（`packages/lsp`）与 **VS Code 扩展**（`packages/vscode-sysml`），提供诊断、补全、悬浮、大纲、语法高亮与 SVG 预览；并含 **画廊与 Playground** 演示（`npm run dev`）与完整文档（`docs/`）。
+> 状态：**v0.1.1**。五种视图已能从 `.sysml` 文本经库 API、`sysml2svg` CLI（`--view bdd`、`requirement`、`ibd`、`statemachine`、`activity`）与 Mermaid 插件端到端输出 SVG：**块定义图（BDD）**、**需求图**、**内部块图（IBD，含端口与连接器）**、**状态机图**、**活动/泳道图**。另有 **语言服务器**（`packages/lsp`）与 **VS Code 扩展**（`packages/vscode-sysml`），提供诊断、补全、悬浮、大纲、语法高亮与 SVG 预览；并含 **画廊与 Playground** 演示（`npm run dev`）与完整文档（`docs/`）。
 
 ## 目标定位
 
@@ -56,6 +56,9 @@ npm run dev     # 启动 http://localhost:3000
 
 - **画廊** —— `http://localhost:3000/demo/index.html`：每个示例经由 Mermaid 插件渲染。
 - **Playground** —— `http://localhost:3000/demo/playground.html`：左侧编辑 `.sysml`，选择视图，实时查看图表与诊断。
+- **中文版** —— `/demo/index.zh.html` 与 `/demo/playground.zh.html`（中文界面，示例源码带中文注释）。
+
+每个页面的标题栏都带有返回 [GitHub 仓库](https://github.com/fengdonglu/sysml2-mermaid) 的链接（章鱼猫图标 + 文字）。
 
 模型首行可带视图指令（`sysml bdd`、`sysml requirement`、`sysml ibd`、`sysml statemachine`、`sysml activity`）；不带则默认 BDD 视图。
 

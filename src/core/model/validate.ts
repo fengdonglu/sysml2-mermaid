@@ -1,4 +1,5 @@
 import { diagnostic } from '../sysml/diagnostics.js';
+import { installBuiltins } from './builtins.js';
 import { checkSemantics } from './semantic.js';
 import type { Element, Position, SysmlModel } from './types.js';
 
@@ -36,6 +37,8 @@ function featureInHierarchy(
 }
 
 export function validate(model: SysmlModel): void {
+  installBuiltins(model);
+
   const byQName = new Map<string, string>();
   const bySimple = new Map<string, string[]>();
 

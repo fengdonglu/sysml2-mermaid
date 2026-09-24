@@ -10,6 +10,18 @@ body { margin: 0; font: 15px/1.5 system-ui, sans-serif; }
   background: Canvas;
   border-bottom: 1px solid #8884;
 }
+.header-actions {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+}
+.header-actions a { color: inherit; text-decoration: none; opacity: 0.8; display: inline-flex; align-items: center; gap: 6px; }
+.header-actions a:hover { opacity: 1; }
+.header-actions .repo-link { border: 1px solid #8884; border-radius: 6px; padding: 3px 8px; }
 .site-header h1 { margin: 0 0 4px; font-size: 22px; }
 .tagline { margin: 0 0 10px; opacity: 0.75; }
 
@@ -56,6 +68,12 @@ main {
 .panel.output svg { max-width: 100%; height: auto; }
 
 .error { color: #c0392b; white-space: pre-wrap; }
+
+.tok-comment { color: #7a8a99; font-style: italic; }
+.tok-string { color: #b5651d; }
+.tok-number { color: #8b5cf6; }
+.tok-keyword { color: #2563eb; font-weight: 600; }
+.tok-op { color: #c0392b; }
 
 @media (max-width: 900px) {
   #toc { grid-template-columns: repeat(2, minmax(0, 1fr)); }

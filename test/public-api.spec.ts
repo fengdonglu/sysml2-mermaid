@@ -3,7 +3,7 @@ import { VERSION, renderModel, renderSvg } from '../src/index.js';
 
 describe('public API', () => {
   it('exposes a version', () => {
-    expect(VERSION).toBe('0.1.0');
+    expect(VERSION).toBe('0.1.1');
   });
   it('renderModel returns a validated model', () => {
     const m = renderModel('sysml\npackage P { part def A; }');

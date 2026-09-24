@@ -5,10 +5,14 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.1.1] - 2026-09-24
 
 ### Added
 
+- **Built-in standard-library subset** — the `ScalarValues` value types
+  (`Real`, `Integer`, `String`, …) and standard view definitions
+  (`GeneralView`, `InterconnectionView`, …) resolve without an
+  `unresolved-reference` warning.
 - **ELK layout** — an optional `elkjs` backend with port constraints and
   orthogonal routing for IBD: library `renderSvgAsync(source, { layout: 'elk' })`
   and CLI `--layout elk` (dagre stays the default). In the browser bundle ELK is
@@ -79,4 +83,5 @@ through a DOM-free core shared by every entry point.
 - **Documentation** — usage, development, and about guides in English with
   `*.zh.md` Chinese copies (`docs/`).
 
+[0.1.1]: https://github.com/fengdonglu/sysml2-mermaid/releases/tag/v0.1.1
 [0.1.0]: https://github.com/fengdonglu/sysml2-mermaid/releases/tag/v0.1.0

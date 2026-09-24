@@ -1,14 +1,26 @@
 {
   "name": "sysml2-mermaid-lsp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Language Server for SysML v2 textual notation used by sysml2-mermaid",
   "type": "module",
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/fengdonglu/sysml2-mermaid", "directory": "packages/lsp" },
-  "bin": { "sysml-lsp": "./dist/server.js" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fengdonglu/sysml2-mermaid",
+    "directory": "packages/lsp"
+  },
+  "bin": {
+    "sysml-lsp": "./dist/server.js"
+  },
   "main": "./dist/server.js",
-  "files": ["dist"],
-  "scripts": { "build": "tsc -p tsconfig.json --noEmit && node build.mjs", "test": "vitest run", "typecheck": "tsc --noEmit" },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit && node build.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {},
   "devDependencies": {
     "sysml2-mermaid": "file:../..",

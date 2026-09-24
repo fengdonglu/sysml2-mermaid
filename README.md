@@ -6,7 +6,7 @@ Render **SysML v2** textual models (`.sysml`) as diagrams — a Mermaid external
 diagram plugin, plus a CLI converter, a Language Server, and a VS Code
 extension.
 
-> Status: **v0.5**. Five views render end to end from `.sysml` text to SVG
+> Status: **v0.1.1**. Five views render end to end from `.sysml` text to SVG
 > through the library API, the `sysml2svg` CLI (`--view bdd`, `requirement`,
 > `ibd`, `statemachine`, `activity`), and the Mermaid plugin: **Block Definition
 > Diagrams**, **Requirement diagrams**, **Internal Block Diagrams** (ports and
@@ -74,6 +74,9 @@ npm run dev     # serves http://localhost:3000
 
 - **Gallery** — `http://localhost:3000/demo/index.html`: each example rendered through the Mermaid plugin.
 - **Playground** — `http://localhost:3000/demo/playground.html`: edit `.sysml` on the left, pick a view, see the diagram and diagnostics live.
+- **中文版** — `/demo/index.zh.html` and `/demo/playground.zh.html` (中文界面，示例源码带中文注释)。
+
+Every page links back to the [GitHub repository](https://github.com/fengdonglu/sysml2-mermaid) from its header.
 
 The first line of a model may carry a view directive (`sysml bdd`, `sysml requirement`, `sysml ibd`, `sysml statemachine`, `sysml activity`); without one the BDD view is used.
 

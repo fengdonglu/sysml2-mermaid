@@ -1,31 +1,82 @@
 {
   "name": "sysml2-mermaid-vscode",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "fengdonglu",
   "description": "VS Code support for SysML v2 textual notation — syntax highlighting, diagnostics, preview",
   "type": "module",
-  "repository": { "type": "git", "url": "https://github.com/fengdonglu/sysml2-mermaid", "directory": "packages/vscode-sysml" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fengdonglu/sysml2-mermaid",
+    "directory": "packages/vscode-sysml"
+  },
   "license": "MIT",
-  "engines": { "vscode": "^1.94.0" },
-  "categories": ["Programming Languages", "Visualization"],
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Visualization"
+  ],
   "main": "./dist/extension.js",
-  "activationEvents": ["onLanguage:sysml"],
+  "activationEvents": [
+    "onLanguage:sysml"
+  ],
   "contributes": {
-    "languages": [{ "id": "sysml", "aliases": ["SysML v2"], "extensions": [".sysml"] }],
-    "grammars": [{ "language": "sysml", "scopeName": "source.sysml", "path": "./syntaxes/sysml.tmLanguage.json" }],
+    "languages": [
+      {
+        "id": "sysml",
+        "aliases": [
+          "SysML v2"
+        ],
+        "extensions": [
+          ".sysml"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sysml",
+        "scopeName": "source.sysml",
+        "path": "./syntaxes/sysml.tmLanguage.json"
+      }
+    ],
     "commands": [
-      { "command": "sysml.preview", "title": "SysML: Open Preview" },
-      { "command": "sysml.exportSvg", "title": "SysML: Export SVG" }
+      {
+        "command": "sysml.preview",
+        "title": "SysML: Open Preview"
+      },
+      {
+        "command": "sysml.exportSvg",
+        "title": "SysML: Export SVG"
+      }
     ],
     "configuration": {
       "title": "sysml2-mermaid",
       "properties": {
-        "sysml.diagnostics.enable": { "type": "boolean", "default": true, "description": "Enable SysML diagnostics." },
+        "sysml.diagnostics.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable SysML diagnostics."
+        },
         "sysml.preview.view": {
           "type": "string",
           "default": "",
-          "enum": ["", "bdd", "requirement", "ibd", "statemachine", "activity"],
-          "enumDescriptions": ["", "Block Definition Diagram", "Requirement diagram", "Internal Block Diagram", "State machine", "Activity / Swimlane"],
+          "enum": [
+            "",
+            "bdd",
+            "requirement",
+            "ibd",
+            "statemachine",
+            "activity"
+          ],
+          "enumDescriptions": [
+            "",
+            "Block Definition Diagram",
+            "Requirement diagram",
+            "Internal Block Diagram",
+            "State machine",
+            "Activity / Swimlane"
+          ],
           "description": "View used by 'SysML: Open Preview'. Empty follows the model's view / first-line directive."
         }
       }

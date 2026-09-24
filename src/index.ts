@@ -1,4 +1,4 @@
-export const VERSION = '0.1.0';
+export const VERSION = '0.1.1';
 
 export { renderModel, renderSvg, renderSvgAsync } from './api.js';
 export type { LayoutEngine } from './api.js';
