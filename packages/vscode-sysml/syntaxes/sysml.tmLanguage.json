@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "SysML v2",
+  "scopeName": "source.sysml",
+  "patterns": [
+    { "match": "//.*$", "name": "comment.line.double-slash.sysml" },
+    { "match": "/\\*[\\s\\S]*?\\*/", "name": "comment.block.sysml" },
+    { "match": "^\\s*sysml\\s*$", "name": "keyword.control.header.sysml" },
+    { "match": "\\b(package|import|private|public|part|attribute|port|enum|def|ref|requirement|subject|state|action|transition|connection|interface|allocation)\\b", "name": "storage.type.sysml" },
+    { "match": "\\b(satisfy|verify|require|assume|perform|connect|bind|flow|dependency|specializes|subsets|redefines)\\b", "name": "keyword.other.relationship.sysml" },
+    { "match": "\\b(first|then|entry|do|exit|accept|send|assign|terminate|parallel|by|to|from|of|in|out|doc|comment|about|assert|not)\\b", "name": "keyword.operator.sysml" },
+    { "match": ":>>|:>|::>|::|:=|=>", "name": "punctuation.separator.sysml" }
+  ]
+}

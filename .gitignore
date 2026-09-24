@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+coverage/
+*.tsbuildinfo
+
+# local-only reference material (not for publication)
+reference/
+
+# agent scratch workspace
+.superpowers/
+
+# generated artifacts
+*.vsix
+*.log
+.DS_Store
+Thumbs.db
