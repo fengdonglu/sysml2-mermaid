@@ -9,6 +9,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  deployments: write
 
 concurrency:
   group: pages
@@ -45,3 +46,15 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Prune old Pages deployments
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Keep only the newest deployment in the github-pages environment.
+          repo="${GITHUB_REPOSITORY}"
+          ids=$(gh api "repos/$repo/deployments?environment=github-pages&per_page=100" \
+            --jq 'sort_by(.created_at) | reverse | .[1:] | .[].id')
+          for id in $ids; do
+            gh api --method POST "repos/$repo/deployments/$id/statuses" -f state=inactive >/dev/null 2>&1 || true
+            gh api --method DELETE "repos/$repo/deployments/$id" >/dev/null 2>&1 || true
+          done
