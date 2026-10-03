@@ -2,6 +2,11 @@
 
 English | [中文](README.zh.md)
 
+[![npm](https://img.shields.io/npm/v/sysml2-mermaid?label=npm)](https://www.npmjs.com/package/sysml2-mermaid)
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/fengdonglu.sysml2-mermaid?label=marketplace)](https://marketplace.visualstudio.com/items?itemName=fengdonglu.sysml2-mermaid)
+[![CI](https://github.com/fengdonglu/sysml2-mermaid/actions/workflows/ci.yml/badge.svg)](https://github.com/fengdonglu/sysml2-mermaid/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Render **SysML v2** textual models (`.sysml`) as diagrams — a Mermaid external
 diagram plugin, plus a CLI converter, a Language Server, and a VS Code
 extension.

@@ -4,10 +4,21 @@
   "description": "Language Server for SysML v2 textual notation used by sysml2-mermaid",
   "type": "module",
   "license": "MIT",
+  "keywords": ["sysml", "sysml-v2", "kerml", "lsp", "language-server", "mbse"],
+  "homepage": "https://github.com/fengdonglu/sysml2-mermaid/tree/main/packages/lsp#readme",
+  "bugs": {
+    "url": "https://github.com/fengdonglu/sysml2-mermaid/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/fengdonglu/sysml2-mermaid",
     "directory": "packages/lsp"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "bin": {
     "sysml-lsp": "./dist/server.js"

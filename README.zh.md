@@ -2,6 +2,11 @@
 
 [English](README.md) | 中文
 
+[![npm](https://img.shields.io/npm/v/sysml2-mermaid?label=npm)](https://www.npmjs.com/package/sysml2-mermaid)
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/fengdonglu.sysml2-mermaid?label=marketplace)](https://marketplace.visualstudio.com/items?itemName=fengdonglu.sysml2-mermaid)
+[![CI](https://github.com/fengdonglu/sysml2-mermaid/actions/workflows/ci.yml/badge.svg)](https://github.com/fengdonglu/sysml2-mermaid/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 将 **SysML v2** 文本模型（`.sysml`）渲染为图表——形态为 Mermaid 外部图表插件，另附 CLI 转换器、语言服务器（LSP）与 VS Code 扩展。
 
 > 状态：**v0.1.1**。五种视图已能从 `.sysml` 文本经库 API、`sysml2svg` CLI（`--view bdd`、`requirement`、`ibd`、`statemachine`、`activity`）与 Mermaid 插件端到端输出 SVG：**块定义图（BDD）**、**需求图**、**内部块图（IBD，含端口与连接器）**、**状态机图**、**活动/泳道图**。另有 **语言服务器**（`packages/lsp`）与 **VS Code 扩展**（`packages/vscode-sysml`），提供诊断、补全、悬浮、大纲、语法高亮与 SVG 预览；并含 **画廊与 Playground** 演示（`npm run dev`）与完整文档（`docs/`）。

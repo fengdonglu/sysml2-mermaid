@@ -4,6 +4,8 @@
   "publisher": "fengdonglu",
   "description": "VS Code support for SysML v2 textual notation — syntax highlighting, diagnostics, preview",
   "type": "module",
+  "icon": "icon.png",
+  "keywords": ["sysml", "sysml-v2", "kerml", "mbse", "uml", "diagram", "bdd", "state-machine", "requirements"],
   "repository": {
     "type": "git",
     "url": "https://github.com/fengdonglu/sysml2-mermaid",
