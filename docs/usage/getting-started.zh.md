@@ -30,7 +30,7 @@ npm run build
 
 构建后，CLI 为 `node dist/cli/cli.js`（`npm link` 后可用 `sysml2svg` bin），浏览器包为 `dist/sysml2-mermaid.mjs`。
 
-编辑器方面，从 VS Code Marketplace 安装扩展（搜索 `sysml2-mermaid`），或从最新 GitHub Release 的 VSIX 安装。
+编辑器方面，从 VS Code Marketplace 安装扩展（搜索 `sysml2-mermaid-vscode`），或从最新 GitHub Release 的 VSIX 安装。
 
 ## 第一个模型
 

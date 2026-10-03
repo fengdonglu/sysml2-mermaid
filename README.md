@@ -3,7 +3,7 @@
 English | [中文](README.zh.md)
 
 [![npm](https://img.shields.io/npm/v/sysml2-mermaid?label=npm)](https://www.npmjs.com/package/sysml2-mermaid)
-[![VS Code Marketplace](https://img.shields.io/badge/VS%20Code%20Marketplace-sysml2--mermaid-007ACC)](https://marketplace.visualstudio.com/items?itemName=fengdonglu.sysml2-mermaid)
+[![VS Code Marketplace](https://img.shields.io/badge/VS%20Code%20Marketplace-sysml2--mermaid-007ACC)](https://marketplace.visualstudio.com/items?itemName=fengdonglu.sysml2-mermaid-vscode)
 [![CI](https://github.com/fengdonglu/sysml2-mermaid/actions/workflows/ci.yml/badge.svg)](https://github.com/fengdonglu/sysml2-mermaid/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -76,7 +76,7 @@ npm i sysml2-mermaid mermaid
 
 - **CLI** — `npx sysml2svg model.sysml -o model.svg`.
 - **Library** — `import { renderSvg } from 'sysml2-mermaid'`.
-- **VS Code** — install **sysml2-mermaid** from the Marketplace, or the VSIX on the [Release page](https://github.com/fengdonglu/sysml2-mermaid/releases).
+- **VS Code** — install **sysml2-mermaid-vscode** from the Marketplace, or the VSIX on the [Release page](https://github.com/fengdonglu/sysml2-mermaid/releases).
 
 ## Demo
 

@@ -13,7 +13,7 @@ The extension source lives in
 
 ## Install
 
-Install **sysml2-mermaid** from the VS Code Marketplace (search *sysml2-mermaid*,
+Install **sysml2-mermaid-vscode** from the VS Code Marketplace (search *sysml2-mermaid-vscode*,
 publisher `fengdonglu`), or from the `.vsix` attached to the latest
 [GitHub Release](https://github.com/fengdonglu/sysml2-mermaid/releases).
 

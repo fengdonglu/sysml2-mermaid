@@ -36,7 +36,7 @@ After building, the CLI is `node dist/cli/cli.js` (or the `sysml2svg` bin after
 `npm link`), and the browser bundle is `dist/sysml2-mermaid.mjs`.
 
 For the editor, install the VS Code extension from the Marketplace (search
-`sysml2-mermaid`) or from the VSIX attached to the latest GitHub Release.
+`sysml2-mermaid-vscode`) or from the VSIX attached to the latest GitHub Release.
 
 ## A first model
 

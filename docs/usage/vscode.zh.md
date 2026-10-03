@@ -8,7 +8,7 @@
 
 ## 安装
 
-从 VS Code Marketplace 安装 **sysml2-mermaid**（搜索 *sysml2-mermaid*，发布者 `fengdonglu`），或使用最新 [GitHub Release](https://github.com/fengdonglu/sysml2-mermaid/releases) 附带的 `.vsix`。
+从 VS Code Marketplace 安装 **sysml2-mermaid-vscode**（搜索 *sysml2-mermaid-vscode*，发布者 `fengdonglu`），或使用最新 [GitHub Release](https://github.com/fengdonglu/sysml2-mermaid/releases) 附带的 `.vsix`。
 
 自行构建 VSIX：
 
