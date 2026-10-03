@@ -8,6 +8,10 @@
     "type": "git",
     "url": "https://github.com/fengdonglu/sysml2-mermaid"
   },
+  "homepage": "https://github.com/fengdonglu/sysml2-mermaid#readme",
+  "bugs": {
+    "url": "https://github.com/fengdonglu/sysml2-mermaid/issues"
+  },
   "keywords": [
     "mermaid",
     "sysml",
@@ -51,11 +55,18 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json && node build.mjs",
+    "prepublishOnly": "npm run build",
     "dev": "node scripts/serve.mjs",
     "serve": "node scripts/serve.mjs",
     "gallery": "npm run build && node scripts/build-gallery.mjs",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "@dagrejs/dagre": "^1.1.4",

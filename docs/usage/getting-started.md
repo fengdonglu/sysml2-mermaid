@@ -16,8 +16,14 @@ You can use it in four ways:
 
 ## Install
 
-The package is not published to npm yet; build it from a checkout of this
-repository:
+```bash
+npm i sysml2-mermaid mermaid
+```
+
+`mermaid` (>= 11) is an optional peer dependency: you only need it for the
+plugin. The CLI, the library, and the editor tooling work without it.
+
+To work from a checkout of this repository instead, build it once:
 
 ```bash
 git clone https://github.com/fengdonglu/sysml2-mermaid
@@ -27,12 +33,10 @@ npm run build
 ```
 
 After building, the CLI is `node dist/cli/cli.js` (or the `sysml2svg` bin after
-`npm link`), the library entry is `dist/index.js`, and the browser bundle is
-`dist/sysml2-mermaid.mjs`. Once published, `npm i sysml2-mermaid mermaid` will
-be the install path.
+`npm link`), and the browser bundle is `dist/sysml2-mermaid.mjs`.
 
-`mermaid` (>= 11) is an optional peer dependency: you only need it for the
-plugin. The CLI, the library, and the editor tooling work without it.
+For the editor, install the VS Code extension from the Marketplace (search
+`sysml2-mermaid`) or from the VSIX attached to the latest GitHub Release.
 
 ## A first model
 

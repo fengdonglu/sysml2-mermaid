@@ -47,6 +47,16 @@ SVG —— 经由 Mermaid 外部图插件、CLI、编辑器 LSP 或 VS Code
 
 详见 [`docs/ROADMAP.zh.md`](docs/ROADMAP.zh.md) 与 [`docs/ARCHITECTURE.zh.md`](docs/ARCHITECTURE.zh.md)。
 
+## 安装
+
+```bash
+npm i sysml2-mermaid mermaid
+```
+
+- **CLI** —— `npx sysml2svg model.sysml -o model.svg`。
+- **库** —— `import { renderSvg } from 'sysml2-mermaid'`。
+- **VS Code** —— 从 Marketplace 安装 **sysml2-mermaid**，或用 [Release 页](https://github.com/fengdonglu/sysml2-mermaid/releases) 的 VSIX。
+
 ## 演示
 
 ```bash

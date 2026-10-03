@@ -63,18 +63,28 @@ Five views render from the same model:
 See [`docs/ROADMAP.md`](docs/ROADMAP.md) and
 [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
-## Demo
-
-![Example Block Definition Diagram](assets/example-bdd.svg)
+## Install
 
 ```bash
-npm run build   # produces dist/sysml2-mermaid.mjs (browser bundle)
+npm i sysml2-mermaid mermaid
+```
+
+- **CLI** — `npx sysml2svg model.sysml -o model.svg`.
+- **Library** — `import { renderSvg } from 'sysml2-mermaid'`.
+- **VS Code** — install **sysml2-mermaid** from the Marketplace, or the VSIX on the [Release page](https://github.com/fengdonglu/sysml2-mermaid/releases).
+
+## Demo
+
+```bash
+npm run build   # produces the browser bundle in dist/
 npm run dev     # serves http://localhost:3000
 ```
 
 - **Gallery** — `http://localhost:3000/demo/index.html`: each example rendered through the Mermaid plugin.
-- **Playground** — `http://localhost:3000/demo/playground.html`: edit `.sysml` on the left, pick a view, see the diagram and diagnostics live.
-- **中文版** — `/demo/index.zh.html` and `/demo/playground.zh.html` (中文界面，示例源码带中文注释)。
+- **Playground** — `http://localhost:3000/demo/playground.html`: edit `.sysml` on the left and see the diagram and diagnostics live.
+- **Chinese** — `/demo/index.zh.html` and `/demo/playground.zh.html` (Chinese UI and comments).
+
+Every page links back to the GitHub repository from its header.
 
 Every page links back to the [GitHub repository](https://github.com/fengdonglu/sysml2-mermaid) from its header.
 

@@ -13,7 +13,13 @@
 
 ## 安装
 
-本包尚未发布到 npm；请从本仓库的检出（checkout）构建：
+```bash
+npm i sysml2-mermaid mermaid
+```
+
+`mermaid`（>= 11）是可选的 peer 依赖：只有使用插件时才需要。CLI、库与编辑器工具本身无需安装它。
+
+若想从本仓库的检出（checkout）构建：
 
 ```bash
 git clone https://github.com/fengdonglu/sysml2-mermaid
@@ -22,9 +28,9 @@ npm install
 npm run build
 ```
 
-构建后，CLI 为 `node dist/cli/cli.js`（`npm link` 后可用 `sysml2svg` bin），库入口为 `dist/index.js`，浏览器包为 `dist/sysml2-mermaid.mjs`。发布之后，安装方式将是 `npm i sysml2-mermaid mermaid`。
+构建后，CLI 为 `node dist/cli/cli.js`（`npm link` 后可用 `sysml2svg` bin），浏览器包为 `dist/sysml2-mermaid.mjs`。
 
-`mermaid`（>= 11）是可选的 peer 依赖：只有使用插件时才需要。CLI、库与编辑器工具本身无需安装它。
+编辑器方面，从 VS Code Marketplace 安装扩展（搜索 `sysml2-mermaid`），或从最新 GitHub Release 的 VSIX 安装。
 
 ## 第一个模型
 

@@ -8,9 +8,11 @@
 
 ## 安装
 
-扩展**尚未发布到 Marketplace**。在发布之前，从 VSIX 安装：
+从 VS Code Marketplace 安装 **sysml2-mermaid**（搜索 *sysml2-mermaid*，发布者 `fengdonglu`），或使用最新 [GitHub Release](https://github.com/fengdonglu/sysml2-mermaid/releases) 附带的 `.vsix`。
 
-1. 从仓库中构建并打包：`npm run package:vsix -w sysml2-mermaid-vscode`（该命令会构建扩展并执行 `vsce package`，生成 `sysml2-mermaid-vscode-*.vsix`）。
+自行构建 VSIX：
+
+1. `npm run package:vsix -w sysml2-mermaid-vscode`（构建扩展并执行 `vsce package`，生成 `sysml2-mermaid-vscode-*.vsix`）。
 2. 在 VS Code 中打开命令面板，运行 **Extensions: Install from VSIX…**，选择该文件。
 3. 按提示重新加载。
 

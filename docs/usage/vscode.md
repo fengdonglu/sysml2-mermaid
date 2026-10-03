@@ -13,14 +13,15 @@ The extension source lives in
 
 ## Install
 
-The extension is **not published to the Marketplace yet**. Until it is, install
-it from a VSIX:
+Install **sysml2-mermaid** from the VS Code Marketplace (search *sysml2-mermaid*,
+publisher `fengdonglu`), or from the `.vsix` attached to the latest
+[GitHub Release](https://github.com/fengdonglu/sysml2-mermaid/releases).
 
-1. Build and package it from the repository:
-   `npm run package:vsix -w sysml2-mermaid-vscode` (this runs the extension build
-   and `vsce package`, producing a `sysml2-mermaid-vscode-*.vsix`).
-2. In VS Code, open the Command Palette, run **Extensions: Install from VSIX…**,
-   and pick the file.
+To build the VSIX yourself:
+
+1. `npm run package:vsix -w sysml2-mermaid-vscode` (builds the extension and runs
+   `vsce package`, producing `sysml2-mermaid-vscode-*.vsix`).
+2. In VS Code, run **Extensions: Install from VSIX…** and pick the file.
 3. Reload when prompted.
 
 VS Code **1.94** or newer is required.
